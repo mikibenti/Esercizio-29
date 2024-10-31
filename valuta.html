@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function changeFlag() {
+            let image = document.getElementById("flag");
+            let value = document.getElementById("valuta").value;
+            if (value == "¥") {
+                image.src = "./images/ja-flag.gif";
+            } else if (value == "CHF") {
+                image.src = "./images/sz-flag.gif";
+            } else if (value == "£") {
+                image.src = "./images/uk-flag.gif";
+            } else {
+                image.src = "./images/us-flag.gif";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio29</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: red;text-align: center;">Cambio Valuta</h1>
+    </div>
+    <div class="center">
+        <form action="cambio.php" method="get">
+            Importo<br>
+            <input type="text" name="importo">
+            <select onchange="changeFlag()" name="valuta" id="valuta">
+                <option value="$">Dollaro($)</option>
+                <option value="¥">Yen(¥)</option>
+                <option value="CHF">Franchi Svizzeri(CHF)</option>
+                <option value="£">Sterline(£)</option>
+            </select>
+            <br><br><input type="submit">
+        </form>
+        <br><br><img src="./images/us-flag.gif" alt="image" id="flag">
+    </div>
+</body>
+
+</html>

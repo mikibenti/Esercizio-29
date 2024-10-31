@@ -1,0 +1,19 @@
+img {
+    width: 70%;
+    height: 50%;
+}
+
+body {
+    background-image: url('./images/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid white;
+    padding: 10px;
+}
